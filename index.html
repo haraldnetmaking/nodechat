@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+    <div id="display" style="width:500px;height:200px;border:#000 thin solid;"></div>
+    <input id="inputMessage" type="text" />
+    <input id="button" type="button" value="Send" />
+
+    <script>
+        var socket = io.connect('http://localhost:8888');
+        $('#button').click(function() {
+            msg = $('#inputMessage').val();
+            socket.emit('message', msg);
+            msg = $('#inputMessage').val('');
+        });
+
+        socket.on('distribute', function (incoming) {
+            console.log(incoming);
+            $('#display').append('<br />'+incoming);
+        })
+
+
+    </script>
+</body>
+</html>
