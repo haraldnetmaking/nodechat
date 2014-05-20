@@ -1,5 +1,5 @@
 # Install
 
 1. Install node.js
-*. npm install socket.io
-*. node app.js
+2. npm install socket.io
+3. node app.js
