@@ -11,7 +11,7 @@
     <input id="button" type="button" value="Send" />
 
     <script>
-        var socket = io.connect('http://htollefsen.com:81');
+        var socket = io.connect('http://htollefsen.com:8888');
         $('#button').click(function() {
             msg = $('#inputMessage').val();
             socket.emit('message', msg);
