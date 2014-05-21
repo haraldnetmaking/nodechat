@@ -1,5 +1,9 @@
 # Install
 
-1. Install node.js
-*. npm install socket.io
-*. node app.js
+## Initial
+1. Install [node.js](http://nodejs.org/download/)
+
+## From terminal
+2. Pull this repository
+3. npm install socket.io
+4. node app.js
